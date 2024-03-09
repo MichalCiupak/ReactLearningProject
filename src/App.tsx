@@ -1,7 +1,16 @@
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Episodes from './containers/Episodes';
+import Characters from './containers/Characters';
+
 function App() {
 
   return (
-    <div>Hello World</div>
+    <Router>
+      <Routes>
+        <Route path="/characters/:episode" element={<Characters />}/>
+        <Route path="/" element={<Episodes/>}/>
+      </Routes>
+    </Router>
   )
 }
 
