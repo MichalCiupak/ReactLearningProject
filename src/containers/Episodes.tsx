@@ -1,25 +1,17 @@
 import { useEffect, useState } from 'react';
 import { IEpisode, IEpisodeApiResponse } from '../utils/interfaces';
 import { request } from 'graphql-request';
+import { episodeQuery, url } from '../utils/query'
 
 const Episodes = () => {
   const [episodes, setEpisodes] = useState<IEpisode[]>([]);
 
   useEffect(() => {
     const fetchEpisodes = async () => {
-      const query = ` {
-        episodes(page: 1, filter: { episode: "S04" }) {
-          results {
-            id,
-            episode,
-            name,
-            air_date
-          }
-        }
-      }`    
+      const query = episodeQuery("S04")
     
       try {
-        const data: IEpisodeApiResponse = await request('https://rickandmortyapi.com/graphql', query);
+        const data: IEpisodeApiResponse = await request(url, query);
         setEpisodes(data.episodes.results);
 
       } catch (error) {
