@@ -2,6 +2,9 @@ import { useEffect, useState } from 'react';
 import { IEpisode, IEpisodeApiResponse } from '../utils/interfaces';
 import { request } from 'graphql-request';
 import { episodeQuery, url } from '../utils/query'
+import Footer from '../components/Footer';
+import Header from '../components/Header';
+import "./Containers.css"
 
 const Episodes = () => {
   const [episodes, setEpisodes] = useState<IEpisode[]>([]);
@@ -25,11 +28,17 @@ const Episodes = () => {
     };
   }, []);
   return (
-    <div>{episodes.map(eps => (
+    <div className='main_container'>
+      <Header/>
       <div>
-        {eps.name}
+        {episodes.map(eps => (
+          <div>
+            {eps.name}
+          </div>
+        ))}
       </div>
-    ))}</div>
+      <Footer/>
+    </div>
   )
 }
 
