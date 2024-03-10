@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Ojuju:wght@200..800&display=swap');
+
+.logo {
+  font-family: "Lato", sans-serif;
+  font-size: 28.1px;
+  color: #000000;
+  font-weight: 700;
+  padding-left: 53px;
+  padding-bottom: 4px;
+  word-spacing: 2px;
+}
+
+.header {
+  display: flex;
+  background: linear-gradient(121.5deg, #DAED49 53%, #00BDD4 53.1%);
+  width: auto;
+  height: 76px;
+  align-items: center;
+}
