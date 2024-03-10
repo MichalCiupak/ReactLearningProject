@@ -3,6 +3,7 @@ import { IEpisode, IEpisodeApiResponse } from '../utils/interfaces';
 import { request } from 'graphql-request';
 import { episodeQuery, url } from '../utils/query'
 import Footer from '../components/Footer';
+import Header from '../components/Header';
 import "./Containers.css"
 
 const Episodes = () => {
@@ -28,6 +29,7 @@ const Episodes = () => {
   }, []);
   return (
     <div className='main_container'>
+      <Header/>
       <div>
         {episodes.map(eps => (
           <div>
