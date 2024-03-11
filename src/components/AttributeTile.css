@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Ojuju:wght@200..800&display=swap');
+
+.container {
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    font-weight: 700;
+    width: 40vw;
+    margin-left: 22px;
+    margin-bottom: 20px;
+}
+
+.character_name {
+    color: #00BDD4;
+    font-size: 20px;
+    line-height: 30px;
+    padding-top: 5px;
+    width: max-content;
+}
+
+.character_species {
+    color: #959595;
+    font-size: 16px;
+    line-height: 24px;
+    padding-top: 6px;
+    padding-bottom: 0px;
+}
+
+.link {
+    width: max-content;
+    color: inherit;
+}
+
+.link:hover {
+    text-decoration: underline;
+    color: #959595;
+}
