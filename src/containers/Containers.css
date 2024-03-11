@@ -9,3 +9,59 @@ body {
   margin: 0;
   cursor: default;
 }
+
+.main_content { 
+  display: flex;
+}
+
+.title_and_image {
+  min-width: 50%;
+  width: 50%;
+  padding-bottom: 110px;
+  box-sizing: border-box;
+  margin: 0;
+
+}
+
+.title_container {
+  padding-top: 35px;
+  padding-left: 157px;
+  display: flex;
+  justify-content:left;
+  font-size: 56px;
+  word-spacing: 3px;
+  line-height: 58px;
+}
+
+
+.title_text {
+  color:#00BDD4;
+  line-height: 72px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.image {
+  justify-content:center;
+  padding-left: 40px;
+  width: 67%;
+  height: auto;
+}
+
+.image_container {
+  display: flex;
+  justify-content: center;
+  padding-top: 0px;
+}
+
+
+.episode_list {
+  width: 50%;
+  min-width: 50%;
+  padding-top: 100px;
+  padding-bottom: 110px;
+  box-sizing: border-box;
+  padding-left: 37px;
+  overflow-x: hidden;
+}
+
