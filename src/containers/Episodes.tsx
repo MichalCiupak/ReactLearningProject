@@ -5,6 +5,7 @@ import { episodeQuery, url } from '../utils/query'
 import PortalImg from "../assets/portal.png"
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+import EpisodeTile from '../components/EpisodeTile';
 import "./Containers.css"
 
 const Episodes = () => {
@@ -43,11 +44,8 @@ const Episodes = () => {
           </div>
         </div>
         <div className='episode_list'>
-          {episodes.map(episode => (
-            <div>
-              {episode.air_date}
-              
-            </div>
+          {episodes.map((episode, index) => (
+            <EpisodeTile episode={episode.episode} air_date={episode.air_date} name={episode.name} name_color={index % 2 === 1 ? '#BDD800' : '#00BDD4' }/>
           ))}
         </div>
       </div>
