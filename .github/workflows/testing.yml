@@ -20,7 +20,9 @@ jobs:
           run: npm install react-scripts@latest --save-dev --legacy-peer-deps
             
         - name: Install Dependencies
-          run: npm install --legacy-peer-deps
+          run: |
+            npm install --save-dev @testing-library/react 
+            npm install --legacy-peer-deps 
 
         - name: Run Tests
           run: npm test
