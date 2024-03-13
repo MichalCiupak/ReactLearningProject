@@ -2,8 +2,10 @@ import { useEffect, useState } from 'react';
 import { IEpisode, IEpisodeApiResponse } from '../utils/interfaces';
 import { request } from 'graphql-request';
 import { episodeQuery, url } from '../utils/query'
+import PortalImg from "../assets/portal.png"
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+import EpisodeTile from '../components/EpisodeTile';
 import "./Containers.css"
 
 const Episodes = () => {
@@ -28,17 +30,27 @@ const Episodes = () => {
     };
   }, []);
   return (
-    <div className='main_container'>
+    <main className='main_container'>
       <Header/>
-      <div>
-        {episodes.map(eps => (
-          <div>
-            {eps.name}
+      <div className='main_content'>
+        <div className='title_and_image'>
+          <div className='title_container'>
+            <p className='main_text_episode'>
+              Episodes of the <strong>4th</strong><br/>season of the series<br/> <span className='title_text'>Rick and Morty</span>
+            </p>
           </div>
-        ))}
+          <div className='image_container'>
+            <img className='image' src={PortalImg} alt="Portal image"/>
+          </div>
+        </div>
+        <div className='episode_list'>
+          {episodes.map((episode, index) => (
+            <EpisodeTile episode={episode.episode} air_date={episode.air_date} name={episode.name} name_color={index % 2 === 1 ? '#BDD800' : '#00BDD4' }/>
+          ))}
+        </div>
       </div>
       <Footer/>
-    </div>
+    </main>
   )
 }
 

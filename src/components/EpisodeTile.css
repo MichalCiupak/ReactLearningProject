@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Ojuju:wght@200..800&display=swap');
+
+.episode_container {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    display: flex;
+    font-weight: 700;
+    text-decoration: none;
+    padding-left: 50px;
+    position: relative;
+    left: -25px;
+}
+
+.episode_name {
+    color: #000;
+    font-size: 20px;
+    padding-right: 27px;
+    border-right: 1px solid #D1D1D1;
+    padding-top: 7px;
+}
+
+.link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.link:hover {
+    text-decoration: underline;
+    color: #959595;
+}
