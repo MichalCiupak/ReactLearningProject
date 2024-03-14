@@ -17,7 +17,7 @@ body {
 .title_and_image {
   min-width: 50%;
   width: 50%;
-  padding-bottom: 110px;
+  padding-bottom: 200px;
   box-sizing: border-box;
   margin: 0;
 
@@ -55,13 +55,30 @@ body {
 }
 
 
-.episode_list {
+.components_list {
   width: 50%;
   min-width: 50%;
   padding-top: 100px;
   padding-bottom: 110px;
   box-sizing: border-box;
   padding-left: 37px;
-  overflow-x: hidden;
+}
+
+
+.character_name_character_details {
+  display: block;
+  color:#00BDD4;
+  line-height: 72px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-top: 19px;
+  margin-bottom: 85px;
+}
+
+.name_paragraph {
+  display: flex;
+  width: 80%;
+  justify-content:center;
+  text-align: center;
 }
 
