@@ -13,7 +13,7 @@ const ReturnButton: React.FC<Props> = ({destination, text}) => {
     <div className='button_container'>
       <Link className='button_link' to={destination}>
         <div className='link_wrapper'>
-          <RiArrowGoBackLine className='back_arrow_ico' />
+          <RiArrowGoBackLine data-testid='return-button-arrow' className='back_arrow_ico' />
           <div className='button_text'>{text}</div>
         </div>
       </Link>
