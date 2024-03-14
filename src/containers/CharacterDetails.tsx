@@ -5,6 +5,7 @@ import { ICharacterDetails, ICharacterDetailsApiResponse } from '../utils/interf
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import AttributeTile from '../components/AttributeTile';
+import ReturnButton from '../components/ReturnButton';
 import "./Containers.css"
 import { useParams } from 'react-router-dom';
 
@@ -13,6 +14,7 @@ import { useParams } from 'react-router-dom';
 const CharacterDetails: React.FC = () => {
   const [characterDetails, setCharacterDetails] = useState<ICharacterDetails>();
   const { characterid } = useParams();
+  const { episode } = useParams();
 
   let id: number;
 
@@ -45,6 +47,7 @@ const CharacterDetails: React.FC = () => {
       <Header/>
       <div className='main_content'>
         <div className='title_and_image'>
+          <ReturnButton destination={`/characters/${episode}`} text={'Characters'}/>
           <div className='title_container'>
             <p className='name_paragraph'>
               <span className='character_name_character_details'>

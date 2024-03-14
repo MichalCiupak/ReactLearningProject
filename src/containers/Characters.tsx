@@ -7,6 +7,7 @@ import PortalImg from "../assets/portal.png"
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import AttributeTile from '../components/AttributeTile';
+import ReturnButton from '../components/ReturnButton';
 import { useParams } from 'react-router-dom';
 
 
@@ -44,6 +45,7 @@ const Characters: React.FC = () => {
       <Header/>
       <div className='main_content'>
         <div className='title_and_image'>
+          <ReturnButton destination='/' text={'Episodes'}/>
           <div className='title_container'>
             <p>
               Characters of the <strong>{episodeIndex}th</strong><br/>episode of the <strong> 4th </strong><br/>season of the series<br/> <span className='title_text'>Rick and Morty</span>
