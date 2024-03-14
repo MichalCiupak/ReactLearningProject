@@ -13,7 +13,7 @@ import { useParams } from 'react-router-dom';
 
 const Characters: React.FC = () => {
   const [characters, setCharacters] = useState<ICharacter[]>([]);
-  const { episode } = useParams();
+  let { episode } = useParams();
 
   let episodeIndex: number;
 
@@ -21,6 +21,7 @@ const Characters: React.FC = () => {
     episodeIndex = parseInt(episode.split('E')[1], 10); 
   } else {
     episodeIndex = 1;
+    episode = "episode"
   }
 
   useEffect(() => {
@@ -57,8 +58,8 @@ const Characters: React.FC = () => {
         </div>
         <div className='components_list'>
           {characters.map((char, index) => (
-            <div>
-              <AttributeTile isLink={true} destination={`/characterdetails/${episode}/${char.id}`} title={char.name} description={char.species} color={index % 2 === 1 ? '#BDD800' : '#00BDD4' }/>
+            <div key={index}>
+              <AttributeTile  isLink={true} destination={`/characterdetails/${episode}/${char.id}`} title={char.name} description={char.species} color={index % 2 === 1 ? '#BDD800' : '#00BDD4' }/>
             </div>  
           ))}
         </div>

@@ -30,6 +30,7 @@ const CharacterDetails: React.FC = () => {
       const query = characterDetailsQuery(id);
       try {
         const data: ICharacterDetailsApiResponse = await request(url, query);
+        console.log(data)
         setCharacterDetails(data.character);
       } catch (error) {
         console.error('Error fetching episodes:', error);
