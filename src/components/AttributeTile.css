@@ -9,7 +9,7 @@
     margin-bottom: 20px;
 }
 
-.character_name {
+.attribute_name {
     color: #00BDD4;
     font-size: 20px;
     line-height: 30px;
@@ -17,7 +17,7 @@
     width: max-content;
 }
 
-.character_species {
+.attribute_description {
     color: #959595;
     font-size: 16px;
     line-height: 24px;

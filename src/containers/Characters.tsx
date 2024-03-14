@@ -23,18 +23,17 @@ const Characters: React.FC = () => {
   }
 
   useEffect(() => {
-    const fetchEpisodes = async () => {
+    const fetchCharacters = async () => {
       const query = charactersQuery(episode || "")
       try {
         const data: ICharacterApiResponse = await request(url, query);
         setCharacters(data.episodes.results[0].characters);
-        console.log(data)
       } catch (error) {
         console.error('Error fetching characters:', error);
       }
     };
 
-    fetchEpisodes();
+    fetchCharacters();
 
     return () => {
     };

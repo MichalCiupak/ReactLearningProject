@@ -29,6 +29,8 @@ const Episodes = () => {
     return () => {
     };
   }, []);
+
+
   return (
     <main className='main_container'>
       <Header/>
@@ -45,7 +47,7 @@ const Episodes = () => {
         </div>
         <div className='components_list'>
           {episodes.map((episode, index) => (
-            <EpisodeTile episode={episode.episode} air_date={episode.air_date} name={episode.name} name_color={index % 2 === 1 ? '#BDD800' : '#00BDD4' }/>
+            <EpisodeTile key={index} episode={episode.episode} air_date={episode.air_date} name={episode.name} name_color={index % 2 === 1 ? '#BDD800' : '#00BDD4' }/>
           ))}
         </div>
       </div>
