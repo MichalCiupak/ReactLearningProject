@@ -50,8 +50,8 @@ const CharacterDetails: React.FC = () => {
         <div className='title_and_image'>
           <ReturnButton destination={`/characters/${episode}`} text={'Characters'}/>
           <div className='title_container'>
-            <p className='name_paragraph'>
-              <span className='character_name_character_details'>
+            <p className='description_paragraph-character-details'>
+              <span className='character_name-character-details'>
                 {characterDetails?.name}
               </span>
             </p>
@@ -63,15 +63,15 @@ const CharacterDetails: React.FC = () => {
         </div>
         <div className='components_list'>
           <AttributeTile title={characterDetails?.status || '-'} description={"Status"} color={'#00BDD4'}/>
-          <div className='line_characters'></div>
+          <div className='line-characters'></div>
           <AttributeTile title={characterDetails?.species || '-'} description={"Species"} color={'#BDD800'}/>
-          <div className='line_characters'></div>
+          <div className='line-characters'></div>
           <AttributeTile title={characterDetails?.type || '-'} description={"Type"} color={'#00BDD4'}/>
-          <div className='line_characters'></div>
+          <div className='line-characters'></div>
           <AttributeTile title={characterDetails?.gender || '-'} description={"Gender"} color={'#BDD800'}/>
-          <div className='line_characters'></div>
+          <div className='line-characters'></div>
           <AttributeTile title={characterDetails?.origin.name || '-'} description={"Origin"} color={'#00BDD4'}/>
-          <div className='line_characters'></div>
+          <div className='line-characters'></div>
           <AttributeTile title={characterDetails?.location.name || '-'} description={"Last known location"} color={'#BDD800'}/>
         </div>
       </div>

@@ -37,7 +37,7 @@ const Episodes = () => {
       <div className='main_content'>
         <div className='title_and_image'>
           <div className='title_container'>
-            <p>
+            <p className='description_paragraph-episode'>
               Episodes of the <strong>4th</strong><br/>season of the series<br/> <span className='title_text'>Rick and Morty</span>
             </p>
           </div>
@@ -47,7 +47,10 @@ const Episodes = () => {
         </div>
         <div className='components_list'>
           {episodes.map((episode, index) => (
-            <EpisodeTile key={index} episode={episode.episode} air_date={episode.air_date} name={episode.name} name_color={index % 2 === 1 ? '#BDD800' : '#00BDD4' }/>
+            <div key={index}>
+              <EpisodeTile episode={episode.episode} air_date={episode.air_date} name={episode.name} name_color={index % 2 === 1 ? '#BDD800' : '#00BDD4' }/>
+              {index !== episodes.length - 1 && <div className='line'></div>}
+            </div>
           ))}
         </div>
       </div>
