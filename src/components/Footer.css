@@ -1,20 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Ojuju:wght@200..800&display=swap');
 
 .footer {
-    display: flex;
-    background-color: #464646;
-    width: auto;
-    height: 67px;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  background-color: #464646;
+  width: auto;
+  height: 67px;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer_text {
-    font-family: 'Lato', sans-serif;
-    font-size: 13px;
-    font-weight: 700;
-    color: #cccccc;
-    padding-bottom: 10px;
-    padding-left: 20px;
+  font-family: 'Lato', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #cccccc;
+  padding-bottom: 10px;
+  padding-left: 20px;
+}
 
+@media screen and (max-width: 600px) {
+  .footer {
+    height: 49px;
+  }
+
+  .footer_text {
+    padding: 0;
+    padding-right: 18px;
+    font-size: 14px;
+  }
 }
