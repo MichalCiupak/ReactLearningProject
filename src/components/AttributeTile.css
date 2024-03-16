@@ -1,36 +1,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Ojuju:wght@200..800&display=swap');
 
 .container {
-    font-family: 'Lato', sans-serif;
-    text-decoration: none;
-    font-weight: 700;
-    width: 40vw;
-    margin-left: 22px;
-    margin-bottom: 20px;
+  font-family: 'Lato', sans-serif;
+  text-decoration: none;
+  font-weight: 700;
+  width: 40vw;
+  margin-left: 22px;
+  margin-bottom: 20px;
 }
 
-.character_name {
-    color: #00BDD4;
-    font-size: 20px;
-    line-height: 30px;
-    padding-top: 5px;
-    width: max-content;
+.attribute_name {
+  color: #00BDD4;
+  font-size: 20px;
+  line-height: 30px;
+  padding-top: 5px;
+  width: max-content;
+  max-width: calc(100% - 120px);
 }
 
-.character_species {
-    color: #959595;
-    font-size: 16px;
-    line-height: 24px;
-    padding-top: 6px;
-    padding-bottom: 0px;
+.attribute_description {
+  color: #959595;
+  font-size: 16px;
+  line-height: 24px;
+  padding-top: 6px;
+  padding-bottom: 0px;
+  max-width: calc(100% - 120px);
 }
 
 .link {
-    width: max-content;
-    color: inherit;
+  width: max-content;
+  color: inherit;
 }
 
 .link:hover {
-    text-decoration: underline;
-    color: #959595;
+  text-decoration: underline;
+  color: #959595;
 }
+
+
+@media screen and (max-width: 600px) {
+  .container {
+    margin-left: 0px;
+  }
+
+  .attribute_name {
+    font-size: 18px;
+    padding-top: 11px;
+    max-width: calc(100vw - 40px);
+  }
+  
+  .attribute_description {
+    font-size: 15px;
+    padding-top: 9px;
+    line-height: 18px;
+    padding-bottom: 0px;
+    max-width: none;
+  }
+}
+

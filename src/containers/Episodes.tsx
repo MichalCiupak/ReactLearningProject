@@ -29,13 +29,15 @@ const Episodes = () => {
     return () => {
     };
   }, []);
+
+
   return (
     <main className='main_container'>
       <Header/>
       <div className='main_content'>
         <div className='title_and_image'>
           <div className='title_container'>
-            <p className='main_text_episode'>
+            <p className='description_paragraph-episode'>
               Episodes of the <strong>4th</strong><br/>season of the series<br/> <span className='title_text'>Rick and Morty</span>
             </p>
           </div>
@@ -43,9 +45,12 @@ const Episodes = () => {
             <img className='image' src={PortalImg} alt="Portal image"/>
           </div>
         </div>
-        <div className='episode_list'>
+        <div className='components_list'>
           {episodes.map((episode, index) => (
-            <EpisodeTile episode={episode.episode} air_date={episode.air_date} name={episode.name} name_color={index % 2 === 1 ? '#BDD800' : '#00BDD4' }/>
+            <div key={index}>
+              <EpisodeTile episode={episode.episode} air_date={episode.air_date} name={episode.name} name_color={index % 2 === 1 ? '#BDD800' : '#00BDD4' }/>
+              {index !== episodes.length - 1 && <div className='line'></div>}
+            </div>
           ))}
         </div>
       </div>
