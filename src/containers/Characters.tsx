@@ -48,7 +48,7 @@ const Characters: React.FC = () => {
         <div className='title_and_image'>
           <ReturnButton destination='/' text={'Episodes'}/>
           <div className='title_container'>
-            <p>
+            <p className='description_paragraph-characters'>
               Characters of the <strong>{episodeIndex}th</strong><br/>episode of the <strong> 4th </strong><br/>season of the series<br/> <span className='title_text'>Rick and Morty</span>
             </p>
           </div>
@@ -60,6 +60,7 @@ const Characters: React.FC = () => {
           {characters.map((char, index) => (
             <div key={index}>
               <AttributeTile  isLink={true} destination={`/characterdetails/${episode}/${char.id}`} title={char.name} description={char.species} color={index % 2 === 1 ? '#BDD800' : '#00BDD4' }/>
+              {index !== characters.length - 1 && <div className='line-characters'></div>}
             </div>  
           ))}
         </div>

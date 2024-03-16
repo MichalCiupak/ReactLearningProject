@@ -20,16 +20,16 @@
 
 @media screen and (max-width: 600px) {
   .logo {
-      padding: 0;
-      display: flex;
-      font-size: 30px;
+    padding: 0;
+    display: flex;
+    font-size: 30px;
   }
 
   .header  {
-      background:#DAED49;
-      height: 71px;
-      justify-content: center;
-      align-items: center;
+    background:#DAED49;
+    height: 71px;
+    justify-content: center;
+    align-items: center;
       
   }
 }
