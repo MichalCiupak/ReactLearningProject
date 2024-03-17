@@ -25,7 +25,7 @@ body {
 
 .title_container {
   padding-top: 35px;
-  padding-left: 157px;
+  padding-left: 22.5%;
   display: flex;
   justify-content:left;
   font-size: 56px;
@@ -65,7 +65,7 @@ body {
 }
 
 
-.character_name_character_details {
+.character_name-character-details {
   display: block;
   color:#00BDD4;
   line-height: 72px;
@@ -82,3 +82,96 @@ body {
   text-align: center;
 }
 
+
+@media screen and (max-width: 600px) {
+  .main_content { 
+    display: block;
+  }
+
+  .title_and_image {
+    width: auto;
+    padding-bottom: 0px;
+  }
+
+  .title_container {
+    padding-top: 0px;
+    line-height: 10.7vw;
+    padding-left: 25px;
+  }
+
+  .title_text {
+    line-height: 44px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+
+  .description_paragraph-characters {
+    margin-top:22px;
+    margin-bottom: 35px;
+    font-size: 9.2vw;
+  }
+
+  .description_paragraph-episode {
+    margin-top: 36px;
+    margin-bottom: 35px;
+    font-size: 9.2vw;
+  }
+
+  .image {
+    padding-left: 0px;
+    width: 77.5%;
+  }
+
+  .components_list {
+    width: auto;
+    padding-top: 84px;
+    padding-bottom: 48px;
+    box-sizing: border-box;
+    padding-left: 24px;
+    overflow-x: hidden;
+  }
+
+  .line {
+    display: block;
+    border-bottom: 2px solid #D1D1D1;
+    width: 88%;
+  }
+
+  .line-characters {
+    display: block;
+    border-bottom: 2px solid #D1D1D1;
+    width: 88%;
+    margin-bottom: 4px;
+    margin-top: 4px;
+  }
+
+  .character_name-character-details {
+    display: block;
+    color:#00BDD4;
+    line-height: 52px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    padding-right: 25px;
+    margin-top: 0px;
+    margin-bottom: 9.7vw;
+  }
+
+  .description_paragraph-character-details {
+    margin-top: 18px;
+    margin-bottom: 0px;
+    padding-bottom: 0;
+    font-size: 9.3vw;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .image_container {
+    display: flex;
+    justify-content: center;
+    padding-top: 0px;
+  }
+  
+}
