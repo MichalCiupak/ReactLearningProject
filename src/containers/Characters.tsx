@@ -36,9 +36,6 @@ const Characters: React.FC = () => {
     };
 
     fetchCharacters();
-
-    return () => {
-    };
   }, [episode]);
 
   return (

@@ -37,9 +37,6 @@ const CharacterDetails: React.FC = () => {
     };
 
     fetchCharacterDetails();
-
-    return () => {
-    };
   }, [id]);
 
   return (

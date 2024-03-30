@@ -25,9 +25,6 @@ const Episodes = () => {
     };
 
     fetchEpisodes();
-
-    return () => {
-    };
   }, []);
 
 
