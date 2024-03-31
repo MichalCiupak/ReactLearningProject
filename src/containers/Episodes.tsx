@@ -45,7 +45,7 @@ const Episodes = () => {
         <div className='components_list'>
           {episodes.map((episode, index) => (
             <div key={index}>
-              <EpisodeTile episode={episode.episode} air_date={episode.air_date} name={episode.name} name_color={index % 2 === 1 ? '#BDD800' : '#00BDD4' }/>
+              <EpisodeTile episode={episode.episode} air_date={episode.air_date} name={episode.name}/>
               {index !== episodes.length - 1 && <div className='line'></div>}
             </div>
           ))}

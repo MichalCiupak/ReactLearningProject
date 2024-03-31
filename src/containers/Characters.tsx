@@ -56,7 +56,7 @@ const Characters: React.FC = () => {
         <div className='components_list'>
           {characters.map((char, index) => (
             <div key={index}>
-              <AttributeTile  isLink={true} destination={`/characterdetails/${episode}/${char.id}`} title={char.name} description={char.species} color={index % 2 === 1 ? '#BDD800' : '#00BDD4' }/>
+              <AttributeTile  isLink={true} destination={`/characterdetails/${episode}/${char.id}`} title={char.name} description={char.species}/>
               {index !== characters.length - 1 && <div className='line-characters'></div>}
             </div>  
           ))}
