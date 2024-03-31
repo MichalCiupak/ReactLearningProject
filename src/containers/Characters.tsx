@@ -8,6 +8,7 @@ import Footer from '../components/Footer';
 import Header from '../components/Header';
 import AttributeTile from '../components/AttributeTile';
 import ReturnButton from '../components/ReturnButton';
+import Spinner from '../components/Spinner';
 import { useParams } from 'react-router-dom';
 
 
@@ -54,12 +55,14 @@ const Characters: React.FC = () => {
           </div>
         </div>
         <div className='components_list'>
-          {characters.map((char, index) => (
+          {characters?.length > 0 ? (characters.map((char, index) => (
             <div key={index}>
               <AttributeTile  isLink={true} destination={`/characterdetails/${episode}/${char.id}`} title={char.name} description={char.species}/>
               {index !== characters.length - 1 && <div className='line-characters'></div>}
             </div>  
-          ))}
+          ))) : (
+            <Spinner message={'Loading the characters'}/>
+          )}
         </div>
       </div>
       <Footer/>
