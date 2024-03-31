@@ -29,7 +29,7 @@ body {
 
 .title_container {
   padding-top: 35px;
-  padding-left: 22.5%;
+  padding-left: 21.5%;
   display: flex;
   justify-content:left;
   font-size: 56px;
@@ -67,7 +67,10 @@ body {
   box-sizing: border-box;
   padding-left: 37px;
 }
-
+.description_paragraph-character-details {
+  width: 80%;
+  text-align: center;
+}
 
 .character_name-character-details {
   display: block;
@@ -92,6 +95,12 @@ body {
 
 .components_list > div:nth-child(2n+2){
   color: #DAED49;
+}
+
+.components_container {
+  width: 50%;
+  min-width: 50%;
+  box-sizing: border-box;
 }
 
 @media screen and (max-width: 600px) {
@@ -140,6 +149,10 @@ body {
     box-sizing: border-box;
     padding-left: 24px;
     overflow-x: hidden;
+  }
+
+  .components_container {
+    width: auto;
   }
 
   .line {

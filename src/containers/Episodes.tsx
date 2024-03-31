@@ -6,6 +6,7 @@ import PortalImg from "../assets/portal.png"
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import EpisodeTile from '../components/EpisodeTile';
+import Spinner from '../components/Spinner';
 import "./Containers.css"
 
 const Episodes = () => {
@@ -43,12 +44,14 @@ const Episodes = () => {
           </div>
         </div>
         <div className='components_list'>
-          {episodes.map((episode, index) => (
+          {episodes?.length > 0 ? (episodes.map((episode, index) => (
             <div key={index}>
               <EpisodeTile episode={episode.episode} air_date={episode.air_date} name={episode.name}/>
               {index !== episodes.length - 1 && <div className='line'></div>}
             </div>
-          ))}
+          ))) : (
+            <Spinner message={'Loading the episodes'}/>
+          )}
         </div>
       </div>
       <Footer/>

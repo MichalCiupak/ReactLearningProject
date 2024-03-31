@@ -6,6 +6,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import AttributeTile from '../components/AttributeTile';
 import ReturnButton from '../components/ReturnButton';
+import Spinner from '../components/Spinner';
 import "./Containers.css"
 import { useParams } from 'react-router-dom';
 
@@ -51,36 +52,41 @@ const CharacterDetails: React.FC = () => {
                 {characterDetails?.name}
               </span>
             </p>
-            
           </div>
           <div className='image_container'>
             <img className='image' src={characterDetails?.image} alt="Character image"/>
           </div>
         </div>
-        <div className='components_list'>
-          <div>
-            <AttributeTile title={characterDetails?.status || '-'} description={"Status"}/>
-            <div className='line-characters'></div>
-          </div>
-          <div>
-            <AttributeTile title={characterDetails?.species || '-'} description={"Species"}/>
-            <div className='line-characters'></div>
-          </div>
-          <div>
-            <AttributeTile title={characterDetails?.type || '-'} description={"Type"}/>
-            <div className='line-characters'></div>
-          </div>
-          <div>
-            <AttributeTile title={characterDetails?.gender || '-'} description={"Gender"}/>
-            <div className='line-characters'></div>
-          </div>
-          <div>
-            <AttributeTile title={characterDetails?.origin.name || '-'} description={"Origin"}/>
-            <div className='line-characters'></div>
-          </div>
-          <div>
-            <AttributeTile title={characterDetails?.location.name || '-'} description={"Last known location"}/>
-          </div>
+        <div className='components_container'>
+          {characterDetails ? (
+            <div className='components_list'>
+              <div>
+                <AttributeTile title={characterDetails?.status || '-'} description={"Status"}/>
+                <div className='line-characters'></div>
+              </div>
+              <div>
+                <AttributeTile title={characterDetails?.species || '-'} description={"Species"}/>
+                <div className='line-characters'></div>
+              </div>
+              <div>
+                <AttributeTile title={characterDetails?.type || '-'} description={"Type"}/>
+                <div className='line-characters'></div>
+              </div>
+              <div>
+                <AttributeTile title={characterDetails?.gender || '-'} description={"Gender"}/>
+                <div className='line-characters'></div>
+              </div>
+              <div>
+                <AttributeTile title={characterDetails?.origin.name || '-'} description={"Origin"}/>
+                <div className='line-characters'></div>
+              </div>
+              <div>
+                <AttributeTile title={characterDetails?.location.name || '-'} description={"Last known location"}/>
+              </div>
+            </div>) : (
+            <Spinner message={'Loading the character details'}/>
+          )}
+          
         </div>
       </div>
       <Footer/>
