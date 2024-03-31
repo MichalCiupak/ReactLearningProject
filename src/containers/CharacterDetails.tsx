@@ -58,17 +58,29 @@ const CharacterDetails: React.FC = () => {
           </div>
         </div>
         <div className='components_list'>
-          <AttributeTile title={characterDetails?.status || '-'} description={"Status"} color={'#00BDD4'}/>
-          <div className='line-characters'></div>
-          <AttributeTile title={characterDetails?.species || '-'} description={"Species"} color={'#BDD800'}/>
-          <div className='line-characters'></div>
-          <AttributeTile title={characterDetails?.type || '-'} description={"Type"} color={'#00BDD4'}/>
-          <div className='line-characters'></div>
-          <AttributeTile title={characterDetails?.gender || '-'} description={"Gender"} color={'#BDD800'}/>
-          <div className='line-characters'></div>
-          <AttributeTile title={characterDetails?.origin.name || '-'} description={"Origin"} color={'#00BDD4'}/>
-          <div className='line-characters'></div>
-          <AttributeTile title={characterDetails?.location.name || '-'} description={"Last known location"} color={'#BDD800'}/>
+          <div>
+            <AttributeTile title={characterDetails?.status || '-'} description={"Status"}/>
+            <div className='line-characters'></div>
+          </div>
+          <div>
+            <AttributeTile title={characterDetails?.species || '-'} description={"Species"}/>
+            <div className='line-characters'></div>
+          </div>
+          <div>
+            <AttributeTile title={characterDetails?.type || '-'} description={"Type"}/>
+            <div className='line-characters'></div>
+          </div>
+          <div>
+            <AttributeTile title={characterDetails?.gender || '-'} description={"Gender"}/>
+            <div className='line-characters'></div>
+          </div>
+          <div>
+            <AttributeTile title={characterDetails?.origin.name || '-'} description={"Origin"}/>
+            <div className='line-characters'></div>
+          </div>
+          <div>
+            <AttributeTile title={characterDetails?.location.name || '-'} description={"Last known location"}/>
+          </div>
         </div>
       </div>
       <Footer/>

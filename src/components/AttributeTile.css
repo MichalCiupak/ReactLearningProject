@@ -9,14 +9,14 @@
   margin-bottom: 20px;
 }
 
-.attribute_name {
-  color: #00BDD4;
+.attribute_name{
   font-size: 20px;
   line-height: 30px;
   padding-top: 5px;
   width: max-content;
   max-width: calc(100% - 120px);
 }
+
 
 .attribute_description {
   color: #959595;
