@@ -33,7 +33,7 @@ const CharacterDetails: React.FC = () => {
         const data: ICharacterDetailsApiResponse = await request(url, query);
         setCharacterDetails(data.character);
       } catch (error) {
-        console.error('Error fetching episodes:', error);
+        console.error('Error fetching character details:', error);
       }
     };
 
