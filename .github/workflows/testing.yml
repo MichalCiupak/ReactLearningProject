@@ -17,12 +17,11 @@ jobs:
             node-version: '20'
 
         - name: Install react-scripts@5.0.1
-          run: npm install react-scripts@latest --save-dev --legacy-peer-deps
+          run: npm install react-scripts@latest
             
         - name: Install Dependencies
           run: |
-            npm install --save-dev @testing-library/react --legacy-peer-deps
-            npm install --legacy-peer-deps 
+            npm install
 
         - name: Run Tests
           run: npm test
