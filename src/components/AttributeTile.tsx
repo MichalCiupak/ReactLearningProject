@@ -5,15 +5,14 @@ import "./AttributeTile.css"
 type Props = {
     title: string;
     description: string;
-    color: string;
     destination?: string;
     isLink?: boolean;
 }
 
-const AttributeTile: React.FC<Props> = ({isLink, destination, title, description, color}) => {
+const AttributeTile: React.FC<Props> = ({isLink, destination, title, description}) => {
   return (
     <div className='container'>
-      <div className="attribute_name" style={{ color: color }}>
+      <div className="attribute_name">
         {isLink && destination ? (
           <Link className='link' to={destination}>
             {title}
